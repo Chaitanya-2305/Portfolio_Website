@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Journey</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0d1117;
+            color: white;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden; /* Removes horizontal scroll */
+        }
+        h1 {
+            color: white;
+        }
+        h1 span {
+            color: #00bfff;
+        }
+        .nav-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .nav-container .links a {
+            font-size: 1.2rem;
+            color: white;
+            margin: 0 20px;
+            text-decoration: none;
+            transition: 0.3s linear;
+        }
+        .nav-container .links a:hover {
+            color: #00aaff;
+            border-bottom: 2px solid #00aaff;
+        }
+        .container {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+            flex-wrap: wrap;
+        }
+        .timeline-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            width: 100%;
+            max-width: 100vw;
+            margin: auto;
+            padding: 20px;
+            position: relative;
+            box-sizing: border-box;
+        }
+        .timeline {
+            display: flex;
+            flex-direction: column;
+            width: 45%;
+            min-width: 300px;
+            margin: 10px;
+            position: relative;
+            box-sizing: border-box;
+        }
+        .timeline-box {
+            height: 150px;
+            background-color: #161b22;
+            border: 1px solid #00bfff;
+            padding: 15px;
+            margin: 20px 0; /* Reduced margin between boxes */
+            border-radius: 5px;
+            text-align: left;
+            position: relative;
+            box-sizing: border-box;
+        }
+        .timeline-box::before {
+            content: "";
+            position: absolute;
+            left: -10px; /* Adjusted to align exactly at the start of the box */
+            top: 20%; /* Moved the dot even further up */
+            width: 12px;
+            height: 12px;
+            background-color: #00bfff;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .section-title {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        @media (max-width: 768px) {
+            .timeline-wrapper {
+                flex-direction: column;
+                align-items: center;
+            }
+            .timeline {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>My <span>Journey</span></h1>
+    <div class="nav-container">
+        <div class="links">
+            <a href="index.html" data-aos="fade-up">Home</a>
+            <a href="skills.html" data-aos="fade-up">Skills</a>
+            <a href="about.html" data-aos="fade-up">About</a>
+            <a href="journey.html" data-aos="fade-up">My Jounrney</a>
+            <a href="contact.html" data-aos="fade-up">Contact</a>
+        </div>
+    </div>
+    <div class="timeline-wrapper">
+        <div class="timeline">
+            <div class="section-title">Education</div>
+            <div class="timeline-box">
+                <strong>2020 - 2024</strong><br>
+                <strong>Bachelor's of Technology </strong>
+                <p>I'm 2024 Graduate from Audisanakara College of Engineering and Technology with 7.96 CGPA.</p>
+            </div>
+            <div class="timeline-box">
+                <strong>2018 - 2020</strong><br>
+                <strong>Intermediate</strong>
+                <p>Taking MPC in inter as my Major at Kakathiya Junior College, having scored 7.21 CGPA examinations.</p>
+            </div>
+            <div class="timeline-box">
+                <strong>2018</strong><br>
+                <strong>Schooling</strong>
+                <p>I attended Nagarjuna Public School, Podalakur, Nellore, and scored 9.2 CGPA in my 10th board examinations.</p>
+            </div>
+        </div>
+        <div class="timeline">
+            <div class="section-title">Experience</div>
+            <div class="timeline-box">
+                <strong>2024</strong><br>
+                <strong>Training</strong>
+                <p>I have undergone training in Python Full Stack Development at VCube Software Solutions.</p>
+            </div>
+            <div class="timeline-box">
+                <strong>2025</strong><br>
+                <strong>Intern at VRGT</strong>
+                <p>
+                    As a Python Full Stack Developer Intern,I'll work on backend (Django) and frontend
+                     (HTML, CSS, JavaScript), build web apps,
+                     manage databases,and gain real-world development experience.</p>
+            </div>
+            <!-- <div class="timeline-box">
+                <strong>2019 - 2020</strong><br>
+                <strong>Web Developer - Company</strong>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div> -->
+        </div>
+    </div>
+</body>
+</html>

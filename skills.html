@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Skills</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <style>
+        body {
+            background-color: #0d1b2a;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        h1 {
+            color: white;
+        }
+        .nav-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .nav-container .links a {
+            font-size: 1.2rem;
+            color: white;
+            margin: 0 20px;
+            text-decoration: none;
+            transition: 0.3s linear;
+        }
+        .nav-container .links a:hover {
+            color: #00aaff;
+            border-bottom: 2px solid #00aaff;
+        }
+        .container {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+            flex-wrap: wrap;
+        }
+        .skills-section {
+            width: 48%;
+            min-width: 300px;
+        }
+        .skill-bar {
+            width: 100%;
+            background: black;
+            border-radius: 5px;
+            margin: 15px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        .skill-bar div {
+            height: 10px;
+            background: #00aaff;
+            border-radius: 5px;
+            transition: width 1s ease-in-out;
+        }
+        .circular-skills-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px; 
+            justify-items: center;
+            align-items: center;
+            margin-top: 50px;
+        }
+        .circular-skill {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .circle {
+            width: 85px;
+            height: 85px;
+            border-radius: 50%;
+            border: 5px solid #00aaff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .skill-text {
+            margin-top: 5px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <h1 data-aos="fade-down">My <span style="color: #00aaff;">Skills</span></h1>
+    <div class="nav-container">
+        <div class="links">
+            <a href="index.html" data-aos="fade-up">Home</a>
+            <a href="skills.html" data-aos="fade-up">Skills</a>
+            <a href="about.html" data-aos="fade-up">About</a>
+            <a href="journey.html" data-aos="fade-up">My Jounrney</a>
+            <a href="contact.html" data-aos="fade-up">Contact</a>
+        </div>
+    </div>
+    
+    <div class="container" data-aos="fade-up">
+        <div class="skills-section" data-aos="fade-right">
+            <h2>Technical Skills</h2>
+            <div>Python</div>
+            <div class="skill-bar"><div style="width: 95%;"></div></div>
+            <div>SQL</div>
+            <div class="skill-bar"><div style="width: 95%;"></div></div>
+            <div>HTML</div>
+            <div class="skill-bar"><div style="width: 90%;"></div></div>
+            <div>CSS</div>
+            <div class="skill-bar"><div style="width: 90%;"></div></div>
+            <div>Django</div>
+            <div class="skill-bar"><div style="width: 90%;"></div></div>
+            <div>Javascript</div>
+            <div class="skill-bar"><div style="width: 85%;"></div></div>
+        </div>
+        
+        <div class="skills-section" data-aos="fade-left">
+            <h2>Professional Skills</h2>
+            <div class="circular-skills-container">
+                <div class="circular-skill" data-aos="zoom-in">
+                    <div class="circle">90%</div>
+                    <div class="skill-text">Creativity</div>
+                </div>
+                <div class="circular-skill" data-aos="zoom-in">
+                    <div class="circle">95%</div>
+                    <div class="skill-text">Communication</div>
+                </div>
+                <div class="circular-skill" data-aos="zoom-in">
+                    <div class="circle">80%</div>
+                    <div class="skill-text">Problem Solving</div>
+                </div>
+                <div class="circular-skill" data-aos="zoom-in">
+                    <div class="circle">90%</div>
+                    <div class="skill-text">Teamwork</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000, 
+            once: true, 
+        });
+    </script>
+</body>
+</html>

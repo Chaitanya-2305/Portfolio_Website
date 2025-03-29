@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <style>
+        body {
+            background-color: #0D1B2A;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            opacity: 0;
+            transform: translateY(-20px);
+            animation: fadeIn 1s forwards;
+        }
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        h1 {
+            font-size: 2em;
+            font-weight: bold;
+        }
+        h1 span {
+            color: #00A8E8;
+        }
+        .nav-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .nav-container .links a {
+            font-size: 1.2rem;
+            color: white;
+            margin: 0 20px;
+            text-decoration: none;
+            transition: 0.3s linear;
+        }
+        .nav-container .links a:hover {
+            color: #00aaff;
+            border-bottom: 2px solid #00aaff;
+        }
+        .content-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            max-width: 800px;
+            width: 100%;
+            text-align: center;
+        }
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 10%;
+            border: 3px solid #00A8E8;
+            transition: transform 0.5s;
+            /* margin-top: 5px; */
+        }
+        .description {
+            margin-top: 20px;
+            font-size: 1em;
+        }
+        .btn {
+            background-color: #00A8E8;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            font-size: 1em;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .btn:hover {
+            background-color: #0077A3;
+            transform: scale(1.1);
+        }
+        .hidden-text {
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: max-height 0.5s ease-out, opacity 0.5s ease-out, transform 0.5s ease-out;
+            width: 60%;
+            font-size: 1em;
+            margin-top: 20px;
+        }
+        .hidden-text.show {
+            max-height: 100px;
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+    <script>
+        function showMore() {
+            let extraText = document.getElementById('extra-text');
+            let button = document.getElementById('read-more-btn');
+            
+            extraText.classList.add('show');
+            button.style.transition = 'opacity 0.5s';
+            button.style.opacity = '0';
+            
+            setTimeout(() => {
+                button.style.display = 'none';
+            }, 500);
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>About <span>Me</span></h1>
+        <div class="nav-container">
+            <div class="links">
+                <a href="index.html">Home</a>
+                <a href="skills.html">Skills</a>
+                <a href="about.html">About</a>
+                <a href="journey.html">My Jounrney</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+        <div class="content-container">
+            <img src="./image/imm.png" alt="Profile Picture" class="profile-img">
+            <h2>Web Application Developer!</h2>
+            <p class="description">"I'm a Web Application Developer specializing in Python full-stack development. I build scalable, efficient, and user-friendly applications by seamlessly integrating frontend and 
+                backend technologies to create smooth digital experiences."</p>
+            <button id="read-more-btn" class="btn" onclick="showMore()">Read More</button>
+            <p id="extra-text" class="hidden-text">"Full Stack Development: Crafting the future, one line of code at a time." 💡🚀</p>
+        </div>
+    </div>
+</body>
+</html>
